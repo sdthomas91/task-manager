@@ -11,4 +11,14 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
 
 db = SQLAlchemy(app)
 
+
+
 from taskmanager import routes
+
+
+
+@app.cli.command("create-db")
+def create_db():
+    """Creates the db tables."""
+    db.create_all()
+    print("Database tables created.")
