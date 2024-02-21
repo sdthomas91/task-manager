@@ -20,22 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // select intitalization
     let selects = document.querySelectorAll('select');
     M.FormSelect.init(selects);
+
+    // collapsibles
+
+    let collapsibles = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapsibles, {});
 });
-
-// // Modal Open
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     var elems = document.querySelectorAll('.modal');
-//     var instances = M.Modal.init(elems, {});
-// });
-
-// // Date Picker
-// document.addEventListener('DOMContentLoaded', function () {
-//     var elems = document.querySelectorAll('.datepicker');
-//     var instances = M.Datepicker.init(elems, {
-//         format: "dd mmmm, yyyy",
-//         i18n: {
-//             done: "Select"
-//         }
-//     });
-// });
