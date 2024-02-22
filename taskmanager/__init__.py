@@ -20,3 +20,9 @@ else:
 db = SQLAlchemy(app)
 
 from taskmanager import routes  # noqa
+
+
+@app.cli.command("create_db")
+def create_db():
+    db.create_all()
+    print("Database tables created")
